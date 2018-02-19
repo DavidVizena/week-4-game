@@ -30,16 +30,32 @@ var harryPotter = {
         Health: 140,
         CounterAttack: 3
 };
-    
+
+// INITIALIZE
+$("#harryPotterCharacter").hide();
+$("#hermioneCharacter").hide();
+$("#ronCharacter").hide();
+$("#dracoCharacter").hide();
+$("#harryPotterEnemy").hide();
+$("#hermioneEnemy").hide();
+$("#ronEnemy").hide();
+$("#dracoEnemy").hide();
+
+
 // Button initial clicks begin
 $(".harryPotter").on("click", function() {
     user.push(harryPotter);
     opponents.push(hermione);
     opponents.push(ron);
     opponents.push(draco);
-    console.log(user);
-    console.log(opponents);
-
+    $(".harryPotter").hide();
+    $(".hermione").hide();
+    $(".ron").hide();
+    $(".draco").hide();
+    $("#harryPotterCharacter").show();
+    $("#hermioneEnemy").show();
+    $("#ronEnemy").show();
+    $("#dracoEnemy").show();
 });
 
 $(".hermione").on("click", function() {
@@ -47,9 +63,14 @@ $(".hermione").on("click", function() {
     opponents.push(harryPotter);
     opponents.push(ron);
     opponents.push(draco);
-    console.log(user);
-    console.log(opponents);
-
+    $(".harryPotter").hide();
+    $(".hermione").hide();
+    $(".ron").hide();
+    $(".draco").hide();
+    $("#hermioneCharacter").show();
+    $("#harryPotterEnemy").show();
+    $("#ronEnemy").show();
+    $("#dracoEnemy").show();
 });
 
 $(".ron").on("click", function() {
@@ -57,9 +78,14 @@ $(".ron").on("click", function() {
     opponents.push(hermione);
     opponents.push(harryPotter);
     opponents.push(draco);
-    console.log(user);
-    console.log(opponents);
-
+    $(".harryPotter").hide();
+    $(".hermione").hide();
+    $(".ron").hide();
+    $(".draco").hide();
+    $("#ronCharacter").show();
+    $("#harryPotterEnemy").show();
+    $("#hermioneEnemy").show();
+    $("#dracoEnemy").show();
 });
 
 $(".draco").on("click", function() {
@@ -67,13 +93,24 @@ $(".draco").on("click", function() {
     opponents.push(hermione);
     opponents.push(ron);
     opponents.push(harryPotter);
-    console.log(user);
-    console.log(opponents);
-
+    $(".harryPotter").hide();
+    $(".hermione").hide();
+    $(".ron").hide();
+    $(".draco").hide();
+    $("#dracoCharacter").show();
+    $("#harryPotterEnemy").show();
+    $("#hermioneEnemy").show();
+    $("#ronEnemy").show();
 });
 //Button intital click end
 
-$(".harryPotter").html(harryPotter.Health);
+
+
+
+
+
+
+
 });
 
 
