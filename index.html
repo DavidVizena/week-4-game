@@ -11,7 +11,6 @@
     <!-- Style Link -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- JS link -->
-    <script src="./assets/javascript/game.js"></script>
     <title>Harry Potter - RPG</title>
 </head>
 <body>
@@ -20,54 +19,107 @@
     <div class="titleWrapper">
     <div class="container">
         <div class="row">
-          <div class="col-sm">
+          <div class="col-sm text-right">
             Hogwarts Dueling Class!!
           </div>
         </div>
       </div>
     </div>
-      <!-- Characters -->
+    <!-- END TITLE HEADER TEXT -->
+      
+    <!-- Characters -->
     <div class="characterWrapper">
+        <div class="row">
+        
         <!-- Harry Potter -->
-        <div class="card" style="width: 18rem;">
+        <div class="card harryPotter col-md-1" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                       <p class="card-text">Harry Potter</p>
                     </div>
             </div>
             <!-- Hermione -->
-            <div class="card" style="width: 18rem;">
+            <div class="card hermione col-md-1" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                       <p class="card-text">Hermione Granger</p>
                     </div>
             </div>
             <!-- Ron -->
-            <div class="card" style="width: 18rem;">
+            <div class="card ron col-md-1" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                       <p class="card-text">Ron Weasley</p>
                     </div>
             </div>
             <!-- Draco -->
-            <div class="card" style="width: 18rem;">
+            <div class="card draco col-md-1" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                       <p class="card-text">Draco Malfoy</p>
                     </div>
             </div>
+        </div>
                   
     </div>
+<!-- END CHARACTERS -->
 
+<!-- Your character text -->
+<div class="yourCharactersWrapper">
+        <div class="container col-md-12">
+            <div class="row">
+              <div class="col-sm">
+                Your Character:
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- END YOUR CHARACTER TEXT -->
 
+    <!-- Enemies avaliable text -->
+    <div class="enemiesWrapper">
+            <div class="container col-md-12">
+                <div class="row">
+                  <div class="col-sm">
+                    Enemies Avaliable To Attack:
+                  </div>
+                </div>
+              </div>
+            </div>
+    <!-- END ENIMIES TEXT -->
 
+    <!-- Fight section text -->
+    <div class="fightSectionWrapper">
+            <div class="container col-md-12">
+                <div class="row">
+                  <div class="col-sm">
+                    Fight Section:
+                  </div>
+                </div>
+              </div>
+            </div>
+    <!-- END FIGHT SECTION TEXT -->
 
+<!-- ATTACK BUTTON -->
+<button type="button" class="btn btn-dark">Attack</button>
+<!-- END ATTACK BUTTON -->
 
-
+<!-- DEFENDER TEXT -->
+<div class="defenderWrapper">
+        <div class="container col-md-12">
+            <div class="row">
+              <div class="col-sm">
+                Defender:
+              </div>
+            </div>
+          </div>
+        </div>
 
     <!-- Bootstrap/JS links -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>
+
 </body>
 </html>
