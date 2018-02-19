@@ -1,7 +1,7 @@
 $(document).ready(function(){
 // Global Variables
-var user = {};
-var opponents = {};
+var user = [];
+var opponents = [];
 var harryPotter = {
         Name: "Harry Potter",
         Attack: function (){
@@ -31,15 +31,47 @@ var harryPotter = {
         CounterAttack: 3
 };
     
-
+// Button initial clicks begin
 $(".harryPotter").on("click", function() {
-    $(".harryPotter").hide();
+    user.push(harryPotter);
+    opponents.push(hermione);
+    opponents.push(ron);
+    opponents.push(draco);
+    console.log(user);
+    console.log(opponents);
+
 });
 
-$(".hermione").on("click", function(){
-    $(".hermione").hide();
+$(".hermione").on("click", function() {
+    user.push(hermione);
+    opponents.push(harryPotter);
+    opponents.push(ron);
+    opponents.push(draco);
+    console.log(user);
+    console.log(opponents);
+
 });
 
+$(".ron").on("click", function() {
+    user.push(ron);
+    opponents.push(hermione);
+    opponents.push(harryPotter);
+    opponents.push(draco);
+    console.log(user);
+    console.log(opponents);
+
+});
+
+$(".draco").on("click", function() {
+    user.push(draco);
+    opponents.push(hermione);
+    opponents.push(ron);
+    opponents.push(harryPotter);
+    console.log(user);
+    console.log(opponents);
+
+});
+//Button intital click end
 
 $(".harryPotter").html(harryPotter.Health);
 });
