@@ -2,6 +2,7 @@ $(document).ready(function(){
 // Global Variables
 var user = [];
 var opponents = [];
+var defender = [];
 var harryPotter = {
         Name: "Harry Potter",
         Attack: function (){
@@ -32,6 +33,7 @@ var harryPotter = {
 };
 
 // INITIALIZE
+function initialize(){
 $("#harryPotterCharacter").hide();
 $("#hermioneCharacter").hide();
 $("#ronCharacter").hide();
@@ -40,7 +42,14 @@ $("#harryPotterEnemy").hide();
 $("#hermioneEnemy").hide();
 $("#ronEnemy").hide();
 $("#dracoEnemy").hide();
+$("#harryPotterDefend").hide();
+$("#hermioneDefend").hide();
+$("#ronDefend").hide();
+$("#dracoDefend").hide();
+};
 
+initialize();
+//END Initialize
 
 // Button initial clicks begin
 $(".harryPotter").on("click", function() {
@@ -102,16 +111,37 @@ $(".draco").on("click", function() {
     $("#hermioneEnemy").show();
     $("#ronEnemy").show();
 });
-//Button intital click end
+//Button initial click end
 
-
-
-
-
-
-
-
+//From enemiesAvaliable to defender 
+$("#harryPotterEnemy").on("click", function() {
+    defender.push(harryPotter);
+    $("#harryPotterEnemy").hide();
+    $("#harryPotterDefend").show();
 });
+
+$("#hermioneEnemy").on("click", function() {
+    defender.push(hermione);
+    $("#hermioneEnemy").hide();
+    $("#hermioneDefend").show();
+});
+
+$("#ronEnemy").on("click", function() {
+    defender.push(ron);
+    $("#ronEnemy").hide();
+    $("#ronDefend").show();
+});
+
+$("#dracoEnemy").on("click", function() {
+    defender.push(draco);
+    $("#dracoEnemy").hide();
+    $("#dracoDefend").show();
+});
+//From enemiesAvaliable to defender END
+
+
+
+}); //Closing tag for ready state
 
 
 
