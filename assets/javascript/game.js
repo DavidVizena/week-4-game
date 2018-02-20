@@ -25,14 +25,20 @@ var ron = charBase.charSetup("Ron Weasley", 5, 110, 5);
 var draco = charBase.charSetup("Draco Malfoy", 3, 130, 3);
 var atkpwr = [harryPotter.Attack, hermione.Attack, ron.Attack, draco.Attack];
 
-// var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
-// bckgndSong.play();
+// BackgroundMusic
+var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
+bckgndSong.play();
+
 // INITIALIZE
 function initialize(){
 $("#harryPotterCharacter .card-text").html("Health: " + harryPotter.Health);
 $("#hermioneCharacter .card-text").html("Health: " + hermione.Health);
 $("#ronCharacter .card-text").html("Health: " + ron.Health);
 $("#dracoCharacter .card-text").html("Health: " + draco.Health);
+$("#harryPotterEnemy .card-text").html("Health: " + harryPotter.Health);
+$("#hermioneEnemy .card-text").html("Health: " + hermione.Health);
+$("#ronEnemy .card-text").html("Health: " + ron.Health);
+$("#dracoEnemy .card-text").html("Health: " + hermione.Health);
 $("#harryPotterDefend .card-text").html("Health: " + harryPotter.Health);
 $("#hermioneDefend .card-text").html("Health: " + hermione.Health);
 $("#ronDefend .card-text").html("Health: " + ron.Health);
