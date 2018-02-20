@@ -3,7 +3,7 @@ $(document).ready(function(){
 var user = [];
 var opponents = [];
 var defender = [];
-var compAttack = [];
+var attk= user.Attack;
 var harryPotter =  {Name: "Harry Potter", 
                     Attack: 6, 
                     Health: 100,
@@ -23,15 +23,14 @@ var draco =    {Name: "Draco Malfoy",
 
 // Attack functions
 function multipleAttack(){
-    compAttack.push(user.Attack);
-    user.Attack += compAttack[0] = combinedAttack;
+    user.Attack += attk;
 };
 
 // Attack button
-$("#attack").on("click", function clickAttack(){
+$("#attack").on("click", function(){
     multipleAttack();
-    defender.Health -= combinedAttack;
     user.Health -= defender.CounterAttack;
+    defender.Health -= multipleAttack();
 });
 
 // Win conditions
