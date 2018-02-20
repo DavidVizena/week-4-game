@@ -2,11 +2,31 @@ body{
     background-image: url("../images/hogwartsBackground.png");
 }
 
+/* fonts */
+@font-face {
+    font-family: "ParryHotter";
+    src: url("../assets/fonts/HAARP__.ttf"); 
+    font-family: "Lumos";
+    src: url("../assets/fonts/LumosLatino.ttf");
+}
 div.col-sm.text-right{
+    font-family: 'ParryHotter';
+    font-size: 50px;
+    color: #ECEC29;
+}
+
+div#yourCharacter.col-sm{
+    font-family: 'Lumos';
     font-size: 25px;
     color: #ECEC29;
 }
 
+div.col-sm{
+    font-family: 'Lumos';
+    font-size: 25px;
+    color: #ECEC29;
+}
+/* card class */
 .card-group{
     opacity: .95;
 }
