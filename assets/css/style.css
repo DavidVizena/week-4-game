@@ -1,32 +1,42 @@
 body{
     background-image: url("../images/hogwartsBackground.png");
+    background-size: cover;
+    background-position: fixed;
 }
 
 /* fonts */
 @font-face {
     font-family: "ParryHotter";
-    src: url("../assets/fonts/HAARP__.ttf"); 
+    src: url("../fonts/lightningBolt.ttf"); 
+} 
+@font-face {
     font-family: "Lumos";
-    src: url("../assets/fonts/LumosLatino.ttf");
+    src: url("../fonts/LumosLatino.ttf");
 }
 div.col-sm.text-right{
-    font-family: 'ParryHotter';
-    font-size: 50px;
+    font-family: "ParryHotter";
+    font-size: 75px;
     color: #ECEC29;
 }
 
 div#yourCharacter.col-sm{
-    font-family: 'Lumos';
+    font-family: "Lumos";
     font-size: 25px;
     color: #ECEC29;
 }
 
 div.col-sm{
-    font-family: 'Lumos';
+    font-family: "Lumos";
     font-size: 25px;
     color: #ECEC29;
 }
 /* card class */
+div.card-body{
+    font-family: "Lumos";
+    font-size: 25px;
+    color: #ECEC29;
+    text-align: center   
+}
 .card-group{
     opacity: .95;
 }
@@ -43,16 +53,21 @@ div#harryPotterCharacter.card.col-md-2{
 div#harryPotterEnemy.card.col-md-2{
     background-color: #154B85;
 }
+div#harryPotterDefend.card.col-md-2{
+    background-color: #154B85;
+}
 /* Hermione card css */
 div.card.col-md-2.hermione{
-    background-color: #981956;
+    background-color: #D55D7E;
 }
 div#hermioneCharacter.card.col-md-2{
-    background-color: #981956;
+    background-color: #D55D7E;
 }
 div#hermioneEnemy.card.col-md-2{
-    background-color: #981956;
- 
+    background-color: #D55D7E;
+}
+div#hermioneDefend.card.col-md-2{
+background-color: #D55D7E;
 }
 /* Ron card css */
 div.card.col-md-2.ron{
@@ -64,6 +79,9 @@ div#ronCharacter.card.col-md-2{
 div#ronEnemy.card.col-md-2{
     background-color: #DF914C; 
 }
+div#ronDefend.card.col-md-2{
+    background-color: #DF914C; 
+}
 /* Draco card css */
 div.card.col-md-2.draco{
     background-color: #73A457;
@@ -73,5 +91,7 @@ div#dracoCharacter.card.col-md-2{
 }
 div#dracoEnemy.card.col-md-2{
     background-color: #73A457;
-  
+}
+div#dracoDefend.card.col-md-2{
+    background-color: #73A457;  
 }

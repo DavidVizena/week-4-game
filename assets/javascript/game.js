@@ -3,35 +3,26 @@ $(document).ready(function(){
 var user = [];
 var opponents = [];
 var defender = [];
-var harryPotter = {
-        Name: "Harry Potter",
-        Attack: function (){
-           x += 6;},
-        Health: 100, 
-        CounterAttack: 6
+var charBase = {
+    Name: '',
+    Attack: '',
+    Health: '',
+    CounterAttack: '',
+    charSetup: function(Name, Attack, Health, CounterAttack) {
+        this.Name = Name;
+        this.Attack = Attack;
+        this.Health = Health;
+        this.CounterAttack = CounterAttack;
+    }
 };
-    var hermione = {
-        Name: "Hermione Granger",
-        Attack: function (){
-            x += 4;},
-        Health: 120,
-        CouterAttack: 4
-};
-    var ron = {
-        Name: "Ron Weasley",
-        Attack: function (){
-            x += 5;},
-        Health: 110,
-        CounterAttack: 5
-};
-    var draco = {
-        Name: "Draco Malfoy",
-        Attack: function (){
-            x += 3;},
-        Health: 140,
-        CounterAttack: 3
-};
+var harryPotter = charBase.charSetup("Harry Potter", 6, 100, 6);
+var hermione = charBase.charSetup("Hermione Granger", 4, 120, 4);
+var ron = charBase.charSetup("Ron Weasley", 5, 110, 5);
+var draco = charBase.charSetup("Draco Malfoy", 3, 130, 3);
+var atkpwr = [];
 
+// var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
+// bckgndSong.play();
 // INITIALIZE
 function initialize(){
 $("#harryPotterCharacter").hide();
