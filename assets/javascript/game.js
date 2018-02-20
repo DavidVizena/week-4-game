@@ -4,18 +4,25 @@ var user = [];
 var opponents = [];
 var defender = [];
 var compAttack = [];
-var harryPotter = new Player("Harry Potter", 6, 100, 6);
-var hermione = new Player("Hermione Granger", 4, 120, 4);
-var ron =  new Player("Ron Weasley", 5, 110, 5);
-var draco =  new Player("Draco Malfoy", 3, 130, 3);
+var harryPotter =  {Name: "Harry Potter", 
+                    Attack: 6, 
+                    Health: 100,
+                    CounterAttack: 6};
+var hermione = {Name:"Hermione Granger", 
+                Attack: 4, 
+                Health: 20, 
+                CounterAttack: 4};
+var ron =  {Name: "Ron Weasley",
+            Attack: 5, 
+            Health: 110, 
+            CounterAttack: 5};
+var draco =    {Name: "Draco Malfoy",
+                Attack: 3,
+                Health: 130,
+                CounterAttack: 3};
+
 var atkpwr = [harryPotter.Attack, hermione.Attack, ron.Attack, draco.Attack];
 //Function for character population
-function Player(nm, atk, hlth, cA){
-    this.Name = nm;
-    this.Attack = atk;
-    this.Health = hlth;
-    this.CounterAttack = cA;
-};
 
 // Attack functions
 function multipleAttack(playeratk, playerhealth, defefenderatk, defenderhealth){
@@ -26,16 +33,21 @@ function multipleAttack(playeratk, playerhealth, defefenderatk, defenderhealth){
 
 // Attack button
 $(".attack").on("click", function(){
-    defender.Health - multipleAttack;
+    // console.log($(".defenderWrapper").id);
+    multipleAttack();
+    defender.Health - Player.Attack;
 });
 
 // Win conditions
 if (defender.Health <= 0){
-    alert("Congratulations you are a Duel Master!");
-    initialize();
+    defender = someArray.slice(0);
 }
 else if (user.Health <=0){
     alert("You lose, brush up your skills and try again!");
+    initialize();
+}
+else if (opponents.Health <=0 && defender.Health <=0){
+    alert("Congratulations you are a Duel Master!");
     initialize();
 };
 
@@ -100,7 +112,6 @@ $(".harryPotter").on("click", function() {
     $("#ronEnemy").show();
     $("#dracoEnemy").show();
 });
-
 $(".hermione").on("click", function() {
     user.push(hermione);
     opponents.push(harryPotter);
@@ -145,6 +156,7 @@ $(".draco").on("click", function() {
     $("#hermioneEnemy").show();
     $("#ronEnemy").show();
 });
+console.log(user);
 //Button initial click end
 
 //From enemiesAvaliable to defender 
