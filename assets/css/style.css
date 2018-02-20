@@ -2,7 +2,56 @@ body{
     background-image: url("../images/hogwartsBackground.png");
 }
 
+div.col-sm.text-right{
+    font-size: 25px;
+    color: #ECEC29;
+}
+
 .card-group{
     opacity: .95;
-    color: ;
+}
+img.card-img-top{
+    margin-top: 20px;
+}
+/* HarryPotter card css */
+div.card.col-md-2.harryPotter{
+    background-color: #154B85;
+}
+div#harryPotterCharacter.card.col-md-2{
+    background-color: #154B85;
+}
+div#harryPotterEnemy.card.col-md-2{
+    background-color: #154B85;
+}
+/* Hermione card css */
+div.card.col-md-2.hermione{
+    background-color: #981956;
+}
+div#hermioneCharacter.card.col-md-2{
+    background-color: #981956;
+}
+div#hermioneEnemy.card.col-md-2{
+    background-color: #981956;
+ 
+}
+/* Ron card css */
+div.card.col-md-2.ron{
+    background-color: #DF914C;
+}
+div#ronCharacter.card.col-md-2{
+    background-color: #DF914C;
+}
+div#ronEnemy.card.col-md-2{
+    background-color: #DF914C; 
+}
+/* Draco card css */
+div.card.col-md-2.draco{
+    background-color: #73A457;
+}
+div#dracoCharacter.card.col-md-2{
+    background-color: #73A457;
+}
+div#dracoEnemy.card.col-md-2{
+    background-color: #73A457;
+  
 }
