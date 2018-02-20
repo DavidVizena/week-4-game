@@ -13,18 +13,30 @@ var charBase = {
         this.Attack = Attack;
         this.Health = Health;
         this.CounterAttack = CounterAttack;
+        return this;
+    },
+    currentAttack: function(atkpwr){
+       return atkpwr + this.Attack
     }
 };
 var harryPotter = charBase.charSetup("Harry Potter", 6, 100, 6);
 var hermione = charBase.charSetup("Hermione Granger", 4, 120, 4);
 var ron = charBase.charSetup("Ron Weasley", 5, 110, 5);
 var draco = charBase.charSetup("Draco Malfoy", 3, 130, 3);
-var atkpwr = [];
+var atkpwr = [harryPotter.Attack, hermione.Attack, ron.Attack, draco.Attack];
 
 // var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
 // bckgndSong.play();
 // INITIALIZE
 function initialize(){
+$("#harryPotterCharacter .card-text").html("Health: " + harryPotter.Health);
+$("#hermioneCharacter .card-text").html("Health: " + hermione.Health);
+$("#ronCharacter .card-text").html("Health: " + ron.Health);
+$("#dracoCharacter .card-text").html("Health: " + draco.Health);
+$("#harryPotterDefend .card-text").html("Health: " + harryPotter.Health);
+$("#hermioneDefend .card-text").html("Health: " + hermione.Health);
+$("#ronDefend .card-text").html("Health: " + ron.Health);
+$("#dracoDefend .card-text").html("Health: " + draco.Health);
 $("#harryPotterCharacter").hide();
 $("#hermioneCharacter").hide();
 $("#ronCharacter").hide();
