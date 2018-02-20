@@ -10,7 +10,7 @@ var harryPotter =  {Name: "Harry Potter",
                     CounterAttack: 6};
 var hermione = {Name:"Hermione Granger", 
                 Attack: 4, 
-                Health: 20, 
+                Health: 120, 
                 CounterAttack: 4};
 var ron =  {Name: "Ron Weasley",
             Attack: 5, 
@@ -21,28 +21,24 @@ var draco =    {Name: "Draco Malfoy",
                 Health: 130,
                 CounterAttack: 3};
 
-var atkpwr = [harryPotter.Attack, hermione.Attack, ron.Attack, draco.Attack];
-//Function for character population
-
 // Attack functions
-function multipleAttack(playeratk, playerhealth, defefenderatk, defenderhealth){
-    Player.atkpwr;
-    compAttack.push(Player.Attack);
-    Player.Attack += compAttack[0];
+function multipleAttack(){
+    compAttack.push(user.Attack);
+    user.Attack += compAttack[0] = combinedAttack;
 };
 
 // Attack button
-$(".attack").on("click", function(){
-    // console.log($(".defenderWrapper").id);
+$("#attack").on("click", function clickAttack(){
     multipleAttack();
-    defender.Health - Player.Attack;
+    defender.Health -= combinedAttack;
+    user.Health -= defender.CounterAttack;
 });
 
 // Win conditions
 if (defender.Health <= 0){
-    defender = someArray.slice(0);
+    defender.slice(0);
 }
-else if (user.Health <=0){
+else if (user.Health <= 0){
     alert("You lose, brush up your skills and try again!");
     initialize();
 }
@@ -51,20 +47,6 @@ else if (opponents.Health <=0 && defender.Health <=0){
     initialize();
 };
 
-// BackgroundMusic
-// $('#play').on('click', function() {
-//     document.getElementById('player').play();
-// });
-
-// $('#pause').on('click', function() {
-//     document.getElementById('player').pause();
-// });
-
-// $('#player').on('timeupdate', function() {
-//     $('#seekbar').attr("value", this.currentTime / this.duration);
-// });
-// var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
-// bckgndSong.play();
 
 // INITIALIZE
 function initialize(){
