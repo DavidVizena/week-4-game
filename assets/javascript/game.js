@@ -3,31 +3,56 @@ $(document).ready(function(){
 var user = [];
 var opponents = [];
 var defender = [];
-var charBase = {
-    Name: '',
-    Attack: '',
-    Health: '',
-    CounterAttack: '',
-    charSetup: function(Name, Attack, Health, CounterAttack) {
-        this.Name = Name;
-        this.Attack = Attack;
-        this.Health = Health;
-        this.CounterAttack = CounterAttack;
-        return this;
-    },
-    currentAttack: function(atkpwr){
-       return atkpwr + this.Attack
-    }
-};
-var harryPotter = charBase.charSetup("Harry Potter", 6, 100, 6);
-var hermione = charBase.charSetup("Hermione Granger", 4, 120, 4);
-var ron = charBase.charSetup("Ron Weasley", 5, 110, 5);
-var draco = charBase.charSetup("Draco Malfoy", 3, 130, 3);
+var compAttack = [];
+var harryPotter = new Player("Harry Potter", 6, 100, 6);
+var hermione = new Player("Hermione Granger", 4, 120, 4);
+var ron =  new Player("Ron Weasley", 5, 110, 5);
+var draco =  new Player("Draco Malfoy", 3, 130, 3);
 var atkpwr = [harryPotter.Attack, hermione.Attack, ron.Attack, draco.Attack];
+//Function for character population
+function Player(nm, atk, hlth, cA){
+    this.Name = nm;
+    this.Attack = atk;
+    this.Health = hlth;
+    this.CounterAttack = cA;
+};
+
+// Attack functions
+function multipleAttack(playeratk, playerhealth, defefenderatk, defenderhealth){
+    Player.atkpwr;
+    compAttack.push(Player.Attack);
+    Player.Attack += compAttack[0];
+};
+
+// Attack button
+$(".attack").on("click", function(){
+    defender.Health - multipleAttack;
+});
+
+// Win conditions
+if (defender.Health <= 0){
+    alert("Congratulations you are a Duel Master!");
+    initialize();
+}
+else if (user.Health <=0){
+    alert("You lose, brush up your skills and try again!");
+    initialize();
+};
 
 // BackgroundMusic
-var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
-bckgndSong.play();
+// $('#play').on('click', function() {
+//     document.getElementById('player').play();
+// });
+
+// $('#pause').on('click', function() {
+//     document.getElementById('player').pause();
+// });
+
+// $('#player').on('timeupdate', function() {
+//     $('#seekbar').attr("value", this.currentTime / this.duration);
+// });
+// var bckgndSong = new Audio('./assets/sounds/Harry Potter Theme Song.mp3');
+// bckgndSong.play();
 
 // INITIALIZE
 function initialize(){
@@ -38,7 +63,7 @@ $("#dracoCharacter .card-text").html("Health: " + draco.Health);
 $("#harryPotterEnemy .card-text").html("Health: " + harryPotter.Health);
 $("#hermioneEnemy .card-text").html("Health: " + hermione.Health);
 $("#ronEnemy .card-text").html("Health: " + ron.Health);
-$("#dracoEnemy .card-text").html("Health: " + hermione.Health);
+$("#dracoEnemy .card-text").html("Health: " + draco.Health);
 $("#harryPotterDefend .card-text").html("Health: " + harryPotter.Health);
 $("#hermioneDefend .card-text").html("Health: " + hermione.Health);
 $("#ronDefend .card-text").html("Health: " + ron.Health);
