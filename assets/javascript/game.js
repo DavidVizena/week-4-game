@@ -5,6 +5,9 @@ $(document).ready(function(){
     var defender = [];
     var attk;
     var cAttk;
+    var Health;
+
+    // Character object/properties
     var harryPotter =  {Name: "Harry Potter", 
                         Attack: 6, 
                         Health: 100,
@@ -23,6 +26,10 @@ $(document).ready(function(){
                     CounterAttack: 3};
     
     
+// Media Player
+
+
+
     // Attack button
     $("#attack").on("click", function clickAttack(){
         user[0].Health -= cAttk;
@@ -30,24 +37,11 @@ $(document).ready(function(){
         user[0].Attack += attk;
         // Displays for card healths
         $(".yourCharactersWrapper .card-text").html("Health: " + user[0].Health);
-        $(".enemiesWrapper .card-text").html("Health: " + opponents[0].Health);
         $(".defenderWrapper .card-text").html("Health: " + defender[0].Health);
 
         // console.log ("user health " + user[0].Health + " defender health: " + defender[0].Health + " Next attack: " + user[0].Attack + " counterattack: " + cAttk)
     });
     
-    // Win conditions
-    if (defender[0].Health <= 0){
-        defender.splice(removeIndex, 0);
-    }
-    else if (user[0].Health <= 0){
-        alert("You lose, brush up your skills and try again!");
-        initialize();
-    }
-    else if (opponents[0].Health <=0 && defender[0].Health <=0){
-        alert("Congratulations you are a Duel Master!");
-        initialize();
-    };
     
     
     // INITIALIZE
@@ -76,6 +70,10 @@ $(document).ready(function(){
     $("#hermioneDefend").hide();
     $("#ronDefend").hide();
     $("#dracoDefend").hide();
+    $("div#yourCharacter").hide();
+    $("div#enemiesPick").hide();
+    $("div.col-sm").hide();
+    $("button#attack.btn.btn-dark").hide();
     };
     
     initialize();
@@ -92,11 +90,17 @@ $(document).ready(function(){
         $(".hermione").hide();
         $(".ron").hide();
         $(".draco").hide();
+        $("h2").hide();
         $("#harryPotterCharacter").show();
+        $("div#enemiesPick.col-sm").show();
+        $("#enemies").show();
         $("#hermioneEnemy").show();
         $("#ronEnemy").show();
         $("#dracoEnemy").show();
+        $("div#yourCharacter").show();
+        $("div#enemiesPick").show();
     });
+
     $(".hermione").on("click", function() {
         user.push(hermione);
         opponents.push(harryPotter);
@@ -107,10 +111,15 @@ $(document).ready(function(){
         $(".hermione").hide();
         $(".ron").hide();
         $(".draco").hide();
+        $("h2").hide();
         $("#hermioneCharacter").show();
+        $("div#enemiesPick.col-sm").show();
+        $("#enemies").show();
         $("#harryPotterEnemy").show();
         $("#ronEnemy").show();
         $("#dracoEnemy").show();
+        $("div#yourCharacter").show();
+        $("div#enemiesPick").show();
     });
     
     $(".ron").on("click", function() {
@@ -123,10 +132,15 @@ $(document).ready(function(){
         $(".hermione").hide();
         $(".ron").hide();
         $(".draco").hide();
+        $("h2").hide();
         $("#ronCharacter").show();
+        $("div#enemiesPick.col-sm").show();
+        $("#enemies").show();
         $("#harryPotterEnemy").show();
         $("#hermioneEnemy").show();
         $("#dracoEnemy").show();
+        $("div#yourCharacter").show();
+        $("div#enemiesPick").show();
     });
     
     $(".draco").on("click", function() {
@@ -139,10 +153,15 @@ $(document).ready(function(){
         $(".hermione").hide();
         $(".ron").hide();
         $(".draco").hide();
+        $("h2").hide();
         $("#dracoCharacter").show();
+        $("div#enemiesPick.col-sm").show();
+        $("#enemies").show();
         $("#harryPotterEnemy").show();
         $("#hermioneEnemy").show();
         $("#ronEnemy").show();
+        $("div#yourCharacter").show();
+        $("div#enemiesPick").show();
     });
     
     //Button initial click end
@@ -176,6 +195,21 @@ $(document).ready(function(){
         $("#dracoDefend").show();
     });
     //From enemiesAvaliable to defender END
+    
+        // Win conditions
+        if (user[0] === true){
+            if (defender[0].Health <= 0){
+            defender.splice(removeIndex, 0);
+        }
+            else if (user[0].Health <= 0){
+            alert("You lose, brush up your skills and try again!");
+            initialize();
+        }
+            else if (opponents.Health <=0 && defender[0].Health <=0){
+            alert("Congratulations you are a Duel Master!");
+            initialize();
+        }
+        };
     
     
     

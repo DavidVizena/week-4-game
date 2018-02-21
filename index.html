@@ -16,13 +16,27 @@
 <body>
     
 <!-- MusicControl -->
-<audio controls autoplay src="./assets/sounds/Harry Potter Theme Song.mp3" id="player"></audio>  
+        <!-- <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                        <audio controls autoplay src="./assets/sounds/Harry Potter Theme Song.mp3" id="player"></audio>  
+                  </div>
+                  <div class="col-sm-0">
+                  </div>
+                  <div class="col-sm-0">
+                  </div>
+                </div>
+              </div> -->
 
-    <!-- Title/Header Row -->
-    <div class="titleWrapper">
+
+
+<!-- Title/Header Row -->
+<h1>HogWarts Dueling Class!!</h1>  <br><br>
+<h2>Choose your Hero!</h2>  <br>
+<div class="titleWrapper">
     <div class="container">
         <div class="row">
-          <div class="col-sm text-right">
+          <div class="col-sm text-center">
             Hogwarts Dueling Class!!
           </div>
         </div>
@@ -32,7 +46,7 @@
       
     <div class="card-group">
             <!-- Characters -->
-                    <div id = "harryPotter" class="card col-md-2 harryPotter">
+                    <div class="card col-md-2 harryPotter">
                       <img id= "harryPotter" class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health: 100</p>
@@ -65,29 +79,29 @@
 <div class="yourCharactersWrapper">
         <div class="container col-md-12">
             <div class="row">
-              <div id="yourCharacter" class="col-sm">
+              <div id="yourCharacter">
                 Your Character:
               
               <div class="card-group">
-                    <div id=harryPotterCharacter class="card col-md-2">
+                    <div id=harryPotterCharacter class="card col-md-12">
                       <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health and stuff</p>
                       </div>
                     </div>
-                    <div id=hermioneCharacter class="card col-md-2">
+                    <div id=hermioneCharacter class="card col-md-12">
                       <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health and stuff</p>
                       </div>
                     </div>
-                    <div id=ronCharacter class="card col-md-2">
+                    <div id=ronCharacter class="card col-md-12">
                       <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health and stuff</p>
                       </div>
                     </div>
-                    <div id=dracoCharacter class="card col-md-2">
+                    <div id=dracoCharacter class="card col-md-12">
                             <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
                             <div class="card-body">
                               <p class="card-text">Health and stuff</p>
@@ -106,32 +120,32 @@
     <div class="enemiesWrapper">
             <div class="container col-md-12">
                 <div class="row">
-                  <div class="col-sm">
+                  <div id="enemiesPick">
                     Enemies Awaliable To Attack:
                     <div class="yourEnemiesWrapper">
                             <div class="container col-md-12">
                                 <div class="row">
                                   <div id="enemies" class="col-sm">
                                   <div class="card-group">
-                                        <div id=harryPotterEnemy class="card col-md-2">
+                                        <div id=harryPotterEnemy class="card col-md-3">
                                           <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
                                           <div class="card-body">
                                             <p class="card-text">Health and stuff</p>
                                           </div>
                                         </div>
-                                        <div id=hermioneEnemy class="card col-md-2">
+                                        <div id=hermioneEnemy class="card col-md-3">
                                           <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
                                           <div class="card-body">
                                             <p class="card-text">Health and stuff</p>
                                           </div>
                                         </div>
-                                        <div id=ronEnemy class="card col-md-2">
+                                        <div id=ronEnemy class="card col-md-3">
                                           <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
                                           <div class="card-body">
                                             <p class="card-text">Health and stuff</p>
                                           </div>
                                         </div>
-                                        <div id=dracoEnemy class="card col-md-2">
+                                        <div id=dracoEnemy class="card col-md-3">
                                                 <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
                                                 <div class="card-body">
                                                   <p class="card-text">Health and stuff</p>
@@ -155,7 +169,7 @@
     <div class="fightSectionWrapper">
             <div class="container col-md-12">
                 <div class="row">
-                  <div class="col-sm">
+                  <div id="fightPick" class="col-sm">
                     Fight Section:
                   </div>
                 </div>
@@ -171,7 +185,7 @@
 <div class="defenderWrapper">
         <div class="container col-md-12">
             <div class="row">
-              <div class="col-sm">
+              <div id="defenderPick">
                 Defender:
                 <div class="defenderWrapper">
                         <div class="container col-md-12">

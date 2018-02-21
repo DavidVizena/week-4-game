@@ -4,6 +4,14 @@ body{
     background-position: fixed;
 }
 
+/* Media player */
+audio#player{
+    /* background-color: #808080; */
+    opacity: .25;
+    margin-left: -350px;
+}
+
+
 /* fonts */
 @font-face {
     font-family: "ParryHotter";
@@ -13,18 +21,38 @@ body{
     font-family: "Lumos";
     src: url("../fonts/LumosLatino.ttf");
 }
-div.col-sm.text-right{
+div.col-sm.text-center{
     font-family: "ParryHotter";
     font-size: 75px;
     color: #ECEC29;
 }
+h1{
+    font-family: "ParryHotter";
+    font-size: 75px;
+    color: #ECEC29;  
+    text-align: center;
+    margin-top: 75px;
+}
+h2{
+    font-family: "Lumos";
+    font-size: 50px;
+    color: #ECEC29; 
+    text-align: center;
+    margin-bottom: 50px;
 
-div#yourCharacter.col-sm{
+}
+div#yourCharacter{
     font-family: "Lumos";
     font-size: 25px;
     color: #ECEC29;
+    font-size: 30px;
 }
-
+div#enemiesPick{
+    font-family: "Lumos";
+    font-size: 25px;
+    color: #ECEC29;
+    font-size: 30px;    
+}
 div.col-sm{
     font-family: "Lumos";
     font-size: 25px;
@@ -46,12 +74,15 @@ img.card-img-top{
 /* HarryPotter card css */
 div.card.col-md-2.harryPotter{
     background-color: #154B85;
+    margin-left: 200px;
 }
-div#harryPotterCharacter.card.col-md-2{
+div#harryPotterCharacter.card.col-md-12{
     background-color: #154B85;
 }
-div#harryPotterEnemy.card.col-md-2{
+div#harryPotterEnemy.card.col-md-3{
     background-color: #154B85;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 div#harryPotterDefend.card.col-md-2{
     background-color: #154B85;
@@ -59,25 +90,32 @@ div#harryPotterDefend.card.col-md-2{
 /* Hermione card css */
 div.card.col-md-2.hermione{
     background-color: #D55D7E;
+    margin-left: 50px;
 }
-div#hermioneCharacter.card.col-md-2{
+div#hermioneCharacter.card.col-md-12{
     background-color: #D55D7E;
 }
-div#hermioneEnemy.card.col-md-2{
+div#hermioneEnemy.card.col-md-3{
     background-color: #D55D7E;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 div#hermioneDefend.card.col-md-2{
-background-color: #D55D7E;
+    background-color: #D55D7E;
 }
 /* Ron card css */
 div.card.col-md-2.ron{
     background-color: #DF914C;
+    margin-left: 50px;
+    
 }
-div#ronCharacter.card.col-md-2{
+div#ronCharacter.card.col-md-12{
     background-color: #DF914C;
 }
-div#ronEnemy.card.col-md-2{
+div#ronEnemy.card.col-md-3{
     background-color: #DF914C; 
+    margin-left: 25px;
+    margin-right: 25px;
 }
 div#ronDefend.card.col-md-2{
     background-color: #DF914C; 
@@ -85,13 +123,27 @@ div#ronDefend.card.col-md-2{
 /* Draco card css */
 div.card.col-md-2.draco{
     background-color: #73A457;
+    margin-left: 50px;
+    
 }
-div#dracoCharacter.card.col-md-2{
+div#dracoCharacter.card.col-md-12{
     background-color: #73A457;
 }
-div#dracoEnemy.card.col-md-2{
+div#dracoEnemy.card.col-md-3{
     background-color: #73A457;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 div#dracoDefend.card.col-md-2{
     background-color: #73A457;  
+}
+div#yourCharacter{
+    margin-left: 200px;
+}
+    div#enemiesPick{
+    position: absolute;
+    left: 600px;
+    bottom: 5px;
+    text-align: left;
+    
 }
