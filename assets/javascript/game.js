@@ -37,14 +37,14 @@ $(document).ready(function(){
     });
     
     // Win conditions
-    if (defender.Health <= 0){
-        defender.slice(0);
+    if (defender[0].Health <= 0){
+        defender.splice(removeIndex, 0);
     }
-    else if (user.Health <= 0){
+    else if (user[0].Health <= 0){
         alert("You lose, brush up your skills and try again!");
         initialize();
     }
-    else if (opponents.Health <=0 && defender.Health <=0){
+    else if (opponents[0].Health <=0 && defender[0].Health <=0){
         alert("Congratulations you are a Duel Master!");
         initialize();
     };

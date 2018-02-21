@@ -7,7 +7,7 @@ body{
 /* fonts */
 @font-face {
     font-family: "ParryHotter";
-    src: url("../fonts/lightningBolt.ttf"); 
+    src: url("../fonts/lightningBolt.TTF"); 
 } 
 @font-face {
     font-family: "Lumos";
