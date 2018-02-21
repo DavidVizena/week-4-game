@@ -53,6 +53,12 @@ div#enemiesPick{
     color: #ECEC29;
     font-size: 30px;    
 }
+div#defenderPick{
+    font-family: "Lumos";
+    font-size: 25px;
+    color: #ECEC29;
+    font-size: 30px;    
+}
 div.col-sm{
     font-family: "Lumos";
     font-size: 25px;
@@ -140,10 +146,10 @@ div#dracoDefend.card.col-md-2{
 div#yourCharacter{
     margin-left: 200px;
 }
-    div#enemiesPick{
+div#enemiesPick{
     position: absolute;
     left: 600px;
     bottom: 5px;
     text-align: left;
-    
 }
+

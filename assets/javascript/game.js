@@ -74,6 +74,7 @@ $(document).ready(function(){
     $("div#enemiesPick").hide();
     $("div.col-sm").hide();
     $("button#attack.btn.btn-dark").hide();
+    $("div#defenderPick").hide();
     };
     
     initialize();
@@ -170,30 +171,63 @@ $(document).ready(function(){
     $("#harryPotterEnemy").on("click", function() {
         defender.push(harryPotter);
         cAttk = defender[0].CounterAttack;
+        $("div.col-sm.text-center").hide();
+        $("div#enemiesPick").hide();
         $("#harryPotterEnemy").hide();
-        $("#harryPotterDefend").show();
+        $("#hermioneEnemy").hide();
+        $("#ronEnemy").hide();
+        $("#dracoEnemy").hide();
+        $("div#defenderPick").show();
+        $("div#harryPotterDefend.card.col-md-2").show();
+        $("div.col-sm").show();
+        $("div#fightPick").hide();
     });
     
     $("#hermioneEnemy").on("click", function() {
         defender.push(hermione);
         cAttk = defender[0].CounterAttack;
+        $("div.col-sm.text-center").hide();
+        $("div#enemiesPick").hide();
+        $("#harryPotterEnemy").hide();
         $("#hermioneEnemy").hide();
-        $("#hermioneDefend").show();
+        $("#ronEnemy").hide();
+        $("#dracoEnemy").hide();
+        $("div#defenderPick").show();
+        $("div#hermioneDefend.card.col-md-2").show();
+        $("div.col-sm").show();
+        $("div#fightPick").hide();
     });
     
     $("#ronEnemy").on("click", function() {
         defender.push(ron);
         cAttk = defender[0].CounterAttack;
+        $("div.col-sm.text-center").hide();
+        $("div#enemiesPick").hide();
+        $("#harryPotterEnemy").hide();
+        $("#hermioneEnemy").hide();
         $("#ronEnemy").hide();
-        $("#ronDefend").show();
+        $("#dracoEnemy").hide();
+        $("div#defenderPick").show();
+        $("div#ronDefend.card.col-md-2").show();
+        $("div.col-sm").show();
+        $("div#fightPick").hide();
     });
     
     $("#dracoEnemy").on("click", function() {
         defender.push(draco);
         cAttk = defender[0].CounterAttack;
+        $("div.col-sm.text-center").hide();
+        $("div#enemiesPick").hide();
+        $("#harryPotterEnemy").hide();
+        $("#hermioneEnemy").hide();
+        $("#ronEnemy").hide();
         $("#dracoEnemy").hide();
-        $("#dracoDefend").show();
+        $("div#defenderPick").show();
+        $("div#dracoDefend.card.col-md-2").show();
+        $("div.col-sm").show();
+        $("div#fightPick").hide();
     });
+    
     //From enemiesAvaliable to defender END
     
         // Win conditions
