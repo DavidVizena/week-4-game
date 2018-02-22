@@ -217,13 +217,25 @@ $(document).ready(function(){
                 $("img#attack").hide();
             }              
         };
+        if (defender === harryPotter && harryPotter.Health <= 0){
+            $("div#harryPotterEnemy.card.col-md-3").remove();
+        }
+        if (defender === hermione && hermione.Health <= 0){
+            $("div#hermioneEnemy.card.col-md-3").remove();
+        }
+        if (defender === ron && ron.Health <= 0){
+            $("div#ronEnemy.card.col-md-3").remove();
+        }
+        if (defender === draco && draco.Health <= 0){
+            $("div#dracoEnemy.card.col-md-3").remove();
+        }
         if (user.Health <= 0){
             alert("You lose, brush up your skills and try again!");
-            initialize();
+            location.reload();
         };
         if (enemyDead === 3){
                 alert("Congratulations you are a Duel Master!");
-                initialize();
+                location.reload();
         };    
     });
         
