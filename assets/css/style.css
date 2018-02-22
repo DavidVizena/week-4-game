@@ -75,7 +75,7 @@ img#attack{
     position: absolute;
     width: 100px;
     height: 100px;
-    left: 750px;
+    left: 775px;
     bottom: 500px;
 }
 .card-group{
@@ -162,6 +162,6 @@ div#enemiesPick{
 div#defenderPick{
     position: absolute;
     left: 1125px;
-    bottom: 40px;
+    bottom: 10px;
     text-align: left;  
 }
