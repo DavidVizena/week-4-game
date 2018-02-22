@@ -6,6 +6,8 @@ $(document).ready(function(){
     var cAttk;
     var Health;
     var enemyDead = 0;
+    var pickedUser;
+    var pickedDefender;
 
     // Character object/properties
     var harryPotter =  {Name: "Harry Potter", 
@@ -25,11 +27,6 @@ $(document).ready(function(){
                     Health: 130,
                     CounterAttack: 3};
     
-    
-// Media Player
-
-
-
     // Attack button
     $("#attack").on("click", function clickAttack(){
         user.Health -= cAttk;
@@ -40,6 +37,61 @@ $(document).ready(function(){
         $(".defenderWrapper .card-text").html("Health: " + defender.Health);
         // console.log ("user health " + user[0].Health + " defender health: " + defender[0].Health + " Next attack: " + user[0].Attack + " counterattack: " + cAttk)
             
+// Picked True/fale
+    if (pickedUser === harryPotter){
+        $("div.card.col-md-2.harryPotter").hide();
+    }
+    if (pickedUser === hermione){
+        $("div.card.col-md-2.hermione").hide();
+    }
+    if (pickedUser === ron){
+        $("div.card.col-md-2.harryPotter").hide();
+    }
+    if (pickedUser === draco){
+        $("div.card.col-md-2.harryPotter").hide();
+    }
+    if (pickedDefender === harryPotter){
+        $("div#harryPotterEnemy.card.col-md-3").hide();
+        $("div#harryPotterDefend.card.col-md-12").hide();
+    }
+    if (pickedDefender === hermione){
+        $("div#hermioneEnemy.card.col-md-3").hide();
+        $("div#hermioneDefend.card.col-md-12").hide();
+    }
+    if (pickedDefender === ron){
+        $("div#ronEnemy.card.col-md-3").hide();
+        $("div#ronDefend.card.col-md-12").hide();
+    }
+    if (pickedDefender === draco){
+        $("div#dracoEnemy.card.col-md-3").hide();
+        $("div#dracoDefend.card.col-md-12").hide();
+    }
+    if (harryPotter.Health <= 0){
+        $("div.card.col-md-2.harryPotter").hide();
+        $("div#harryPotterDefend.card.col-md-12").hide();
+        $("div#harryPotterCharacter.card.col-md-12.char1").hide();
+        $("div#harryPotterEnemy.card.col-md-3").hide();
+    }
+    if (hermione.Health <= 0){
+        $("div.card.col-md-2.hermione").hide();
+        $("div#hermioneDefend.card.col-md-12").hide();
+        $("div#hermioneCharacter.card.col-md-12.char1").hide();
+        $("div#hermioneEnemy.card.col-md-3").hide();
+
+    }
+    if (ron.Health <= 0){
+        $("div.card.col-md-2.ron").hide();
+        $("div#ronDefend.card.col-md-12").hide();
+        $("div#ronCharacter.card.col-md-12.char1").hide();
+        $("div#ronEnemy.card.col-md-3").hide();
+    }
+    if (draco.Health <= 0){
+        $("div.card.col-md-2.draco").hide();
+        $("div#dracoDefend.card.col-md-12").hide();
+        $("div#dracoCharacter.card.col-md-12.char1").hide();
+        $("div#dracoEnemy.card.col-md-3").hide();
+    }
+
         // Win conditions
         if (defender.Health <= 0){  
             enemyDead++;
@@ -215,6 +267,7 @@ $(document).ready(function(){
     $(".harryPotter").on("click", function() {
         user = harryPotter;
         attk= user.Attack;
+        pickedUser = true;
         $(".harryPotter").hide();
         $(".hermione").hide();
         $(".ron").hide();
@@ -233,6 +286,7 @@ $(document).ready(function(){
     $(".hermione").on("click", function() {
         user = hermione;
         attk= user.Attack;
+        pickedUser = true;
         $(".harryPotter").hide();
         $(".hermione").hide();
         $(".ron").hide();
@@ -251,6 +305,7 @@ $(document).ready(function(){
     $(".ron").on("click", function() {
         user = ron;
         attk= user.Attack;
+        pickedUser = true;
         $(".harryPotter").hide();
         $(".hermione").hide();
         $(".ron").hide();
@@ -269,6 +324,7 @@ $(document).ready(function(){
     $(".draco").on("click", function() {
         user = draco;
         attk= user.Attack;
+        pickedUser = true;
         $(".harryPotter").hide();
         $(".hermione").hide();
         $(".ron").hide();
@@ -290,6 +346,7 @@ $(document).ready(function(){
     $("#harryPotterEnemy").on("click", function() {
         defender = harryPotter;
         cAttk = defender.CounterAttack;
+        pickedDefender = true;
         $("div.col-sm.text-center").hide();
         $("div#enemiesPick").hide();
         $("#harryPotterEnemy").hide();
@@ -306,6 +363,7 @@ $(document).ready(function(){
     $("#hermioneEnemy").on("click", function() {
         defender = hermione;
         cAttk = defender.CounterAttack;
+        pickedDefender = true;
         $("div.col-sm.text-center").hide();
         $("div#enemiesPick").hide();
         $("#harryPotterEnemy").hide();
@@ -322,6 +380,7 @@ $(document).ready(function(){
     $("#ronEnemy").on("click", function() {
         defender =ron;
         cAttk = defender.CounterAttack;
+        pickedDefender = true;
         $("div.col-sm.text-center").hide();
         $("div#enemiesPick").hide();
         $("#harryPotterEnemy").hide();
@@ -337,7 +396,8 @@ $(document).ready(function(){
     
     $("#dracoEnemy").on("click", function() {
         defender = draco;
-        cAttk = defender.CounterAttack;
+        cAttk = defender.CounterAttack
+        pickedDefender = true;
         $("div.col-sm.text-center").hide();
         $("div#enemiesPick").hide();
         $("#harryPotterEnemy").hide();
@@ -351,12 +411,7 @@ $(document).ready(function(){
         $("img#attack").show();
     });
     
-    //From enemiesAvaliable to defender END
-    
-
-    
-    
-    
+    //From enemiesAvaliable to defender END 
     }); //Closing tag for ready state
     
     
