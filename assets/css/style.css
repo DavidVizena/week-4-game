@@ -10,7 +10,20 @@ audio#player{
     opacity: .25;
     margin-left: -250px;
 }
-
+img#winningPic{
+    height: 1000px;
+    width: 1500px;
+    position: absolute;
+    left: 100px;
+    z-index: 3;
+}
+img#losingPic{
+    height: 1000px;
+    width: 1500px;
+    position: absolute;
+    left: 100px;
+    z-index: 3;
+}
 
 /* fonts */
 @font-face {

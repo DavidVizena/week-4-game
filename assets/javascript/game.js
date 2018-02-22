@@ -230,12 +230,12 @@ $(document).ready(function(){
             $("div#dracoEnemy.card.col-md-3").remove();
         }
         if (user.Health <= 0){
-            alert("You lose, brush up your skills and try again!");
-            location.reload();
+            $("img#losingPic").show();
+            setTimeout(function(){ location.reload(); }, 10000);
         };
         if (enemyDead === 3){
-                alert("Congratulations you are a Duel Master!");
-                location.reload();
+            $("img#winningPic").show();
+            setTimeout(function(){ location.reload(); }, 10000);
         };    
     });
         
@@ -270,6 +270,8 @@ $(document).ready(function(){
     $("div.col-sm").hide();
     $("img#attack").hide();
     $("div#defenderPick").hide();
+    $("img#winningPic").hide();
+    $("img#losingPic").hide();
     };
     
     initialize();
