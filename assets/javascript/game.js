@@ -41,12 +41,16 @@ $(document).ready(function () {
         var defDead = defender.Health -= user.Attack;
         var userDead = user.Attack += attk;
         $("#fireball").show();
-       $("img#fireball").animate({left: "+=900"}, 600);
-       $("img#fireball").fadeOut('slow', function() {});
-       $("img#fireball").animate({left: "-150px"}, 1);
-       
+        $("img#fireball").animate({ left: "+=900" }, 600);
+        $("img#fireball").fadeOut('slow', function () { });
+        $("img#fireball").animate({ left: "-150px" }, 1);
+        $(this).prop('disabled', true);
+        setTimeout(function () {
+            $(this).prop('disabled', false);
+        }, 1100);
 
-       
+
+
 
         // Displays for card healths
         $(".yourCharactersWrapper .card-text").html("Health: " + user.Health);
