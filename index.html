@@ -1,249 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Reset link -->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Style Link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- JS link -->
-    <title>Harry Potter - RPG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Reset link -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <!-- bootstrap link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- Style Link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- JS link -->
+  <title>Harry Potter - RPG</title>
 </head>
+
 <body>
-    
-<!-- MusicControl -->
-        <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                        <audio controls autoplay src="./assets/sounds/Harry Potter Theme Song.mp3" id="player"></audio>  
-                  </div>
-                  <div class="col-sm-0">
-                  </div>
-                  <div class="col-sm-0">
-                  </div>
-                </div>
-              </div>
 
-<!-- Winning/Losing Pics -->
-<img id = "winningPic" src="https://orig00.deviantart.net/07a6/f/2011/223/3/6/harry_potter_spells_by_shadowseason-d465yv7.gif" alt="winning pic">
-<img id = "losingPic" src="https://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2016/07/dumbledoredeath-1426692179-1469740036.gif?quality=.8&height=212&width=499" alt = "losing pic">
-
-
-<!-- Title/Header Row -->
-<h1>HogWarts Dueling Class!!</h1>  <br><br>
-<h2>Choose your Hero!</h2>  <br>
-<div class="titleWrapper">
-    <div class="container">
-        <div class="row">
-        </div>
+  <!-- MusicControl -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <audio controls autoplay src="./assets/sounds/Harry Potter Theme Song.mp3" id="player"></audio>
+      </div>
+      <div class="col-sm-0">
+      </div>
+      <div class="col-sm-0">
       </div>
     </div>
-    <!-- END TITLE HEADER TEXT -->
-      
-    <div class="card-group">
-            <!-- Characters -->
-                    <div class="card col-md-2 harryPotter">
-                      <img id= "harryPotter" class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-text">Health: 100</p>
-                      </div>
-                    </div>
-                    <div class="card col-md-2 hermione">
-                      <img id="hermione" class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-text">Health: 120</p>
-                      </div>
-                    </div>
-                    <div class="card col-md-2 ron">
-                      <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-text">Health: 110</p>
-                      </div>
-                    </div>
-                    <div class="card col-md-2 draco">
-                            <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
-                            <div class="card-body">
-                              <p class="card-text">Health: 130</p>
-                            </div>
-                          </div>
-      
-                  </div>
-                  
-<!-- END CHARACTERS -->
+  </div>
 
-<!-- Your character -->
-<div class="yourCharactersWrapper">
-        <div class="container col-md-12">
-            <div class="row">
-              <div id="yourCharacter">
-                Your Character:
-              
-              <div class="card-group">
-                    <div id=harryPotterCharacter class="card col-md-12 char1">
+  <!-- Winning/Losing Pics -->
+  <img id="winningPic" src="https://orig00.deviantart.net/07a6/f/2011/223/3/6/harry_potter_spells_by_shadowseason-d465yv7.gif"
+    alt="winning pic">
+  <img id="losingPic" src="https://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2016/07/dumbledoredeath-1426692179-1469740036.gif?quality=.8&height=212&width=499"
+    alt="losing pic">
+
+  <div class="container col-md-6 fireball">
+    <img id="fireball" src="./assets/images/fireball.png" alt="fireball">
+  </div>
+
+  <!-- Title/Header Row -->
+  <h1>HogWarts Dueling Class!!</h1>
+  <br>
+  <br>
+  <h2>Choose your Hero!</h2>
+  <br>
+  <div class="titleWrapper">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </div>
+  <!-- END TITLE HEADER TEXT -->
+
+  <div class="card-group">
+    <!-- Characters -->
+    <div class="card col-md-2 harryPotter">
+      <img id="harryPotter" class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Health: 100</p>
+      </div>
+    </div>
+    <div class="card col-md-2 hermione">
+      <img id="hermione" class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Health: 120</p>
+      </div>
+    </div>
+    <div class="card col-md-2 ron">
+      <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Health: 110</p>
+      </div>
+    </div>
+    <div class="card col-md-2 draco">
+      <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Health: 130</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- END CHARACTERS -->
+
+  <!-- Your character -->
+  <div class="yourCharactersWrapper">
+    <div class="container col-md-12">
+      <div class="row">
+        <div id="yourCharacter">
+          Your Character:
+
+          <div class="card-group">
+            <div id=harryPotterCharacter class="card col-md-12 char1">
+              <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Health and stuff</p>
+              </div>
+            </div>
+            <div id=hermioneCharacter class="card col-md-12 char2">
+              <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Health and stuff</p>
+              </div>
+            </div>
+            <div id=ronCharacter class="card col-md-12 char3">
+              <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Health and stuff</p>
+              </div>
+            </div>
+            <div id=dracoCharacter class="card col-md-12 char4">
+              <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Health and stuff</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- END YOUR CHARACTER -->
+
+  <!-- Enemies avaliable -->
+  <div class="enemiesWrapper">
+    <div class="container col-md-12">
+      <div class="row">
+        <div id="enemiesPick">
+          Enemies Awaliable To Attack:
+          <div class="yourEnemiesWrapper">
+            <div class="container col-md-12">
+              <div class="row">
+                <div id="enemies" class="col-sm">
+                  <div class="card-group">
+                    <div id=harryPotterEnemy class="card col-md-3">
                       <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health and stuff</p>
                       </div>
                     </div>
-                    <div id=hermioneCharacter class="card col-md-12 char2">
+                    <div id=hermioneEnemy class="card col-md-3">
                       <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health and stuff</p>
                       </div>
                     </div>
-                    <div id=ronCharacter class="card col-md-12 char3">
+                    <div id=ronEnemy class="card col-md-3">
                       <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
                       <div class="card-body">
                         <p class="card-text">Health and stuff</p>
                       </div>
                     </div>
-                    <div id=dracoCharacter class="card col-md-12 char4">
-                            <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
-                            <div class="card-body">
-                              <p class="card-text">Health and stuff</p>
-                            </div>
-                          </div>
-      
+                    <div id=dracoEnemy class="card col-md-3">
+                      <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">Health and stuff</p>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
+              </div>
             </div>
           </div>
+
         </div>
-    <!-- END YOUR CHARACTER -->
+      </div>
+    </div>
+  </div>
+  <!-- END ENIMIES -->
 
-    <!-- Enemies avaliable -->
-    <div class="enemiesWrapper">
+  <!-- Fight section -->
+  <div class="fightSectionWrapper">
+    <div class="container col-md-12">
+      <div class="row">
+        <div id="fightPick" class="col-sm">
+          Fight Section:
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END FIGHT SECTION -->
+
+  <!-- Container for animation -->
+
+
+
+  <!-- ATTACK BUTTON -->
+  <!-- <button id = "attack" type="button" class="btn btn-dark">Attack</button> -->
+  <img id="attack" src="./assets/images/buttonAttack.png" alt="Attack Button">
+  <!-- END ATTACK BUTTON -->
+
+  <!-- DEFENDER TEXT -->
+  <div class="defenderWrapper">
+    <div class="container col-md-12">
+      <div class="row">
+        <div id="defenderPick">
+          Defender:
+          <div class="defenderWrapper">
             <div class="container col-md-12">
-                <div class="row">
-                  <div id="enemiesPick">
-                    Enemies Awaliable To Attack:
-                    <div class="yourEnemiesWrapper">
-                            <div class="container col-md-12">
-                                <div class="row">
-                                  <div id="enemies" class="col-sm">
-                                  <div class="card-group">
-                                        <div id=harryPotterEnemy class="card col-md-3">
-                                          <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
-                                          <div class="card-body">
-                                            <p class="card-text">Health and stuff</p>
-                                          </div>
-                                        </div>
-                                        <div id=hermioneEnemy class="card col-md-3">
-                                          <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
-                                          <div class="card-body">
-                                            <p class="card-text">Health and stuff</p>
-                                          </div>
-                                        </div>
-                                        <div id=ronEnemy class="card col-md-3">
-                                          <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
-                                          <div class="card-body">
-                                            <p class="card-text">Health and stuff</p>
-                                          </div>
-                                        </div>
-                                        <div id=dracoEnemy class="card col-md-3">
-                                                <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
-                                                <div class="card-body">
-                                                  <p class="card-text">Health and stuff</p>
-                                                </div>
-                                              </div>
-                          
-                                      </div>
-                                    </div>
-                    
-                                </div>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="defenderWrapper">
+                    <div class="container col-md-12">
+                      <div class="row">
+                        <div id="defender" class="col-sm">
+                          <div class="card-group">
+                            <div id=harryPotterDefend class="card col-md-12">
+                              <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">Health and stuff</p>
                               </div>
                             </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-    <!-- END ENIMIES -->
-
-    <!-- Fight section -->
-    <div class="fightSectionWrapper">
-            <div class="container col-md-12">
-                <div class="row">
-                  <div id="fightPick" class="col-sm">
-                    Fight Section:
-                  </div>
-                </div>
-              </div>
-            </div>
-    <!-- END FIGHT SECTION -->
-
-<!-- ATTACK BUTTON -->
-<!-- <button id = "attack" type="button" class="btn btn-dark">Attack</button> -->
-<img id = "attack" src="./assets/images/buttonAttack.png" alt="Attack Button">
-<!-- END ATTACK BUTTON -->
-
-<!-- DEFENDER TEXT -->
-<div class="defenderWrapper">
-        <div class="container col-md-12">
-            <div class="row">
-              <div id="defenderPick">
-                Defender:
-                <div class="defenderWrapper">
-                        <div class="container col-md-12">
-                            <div class="row">
-                              <div class="col-sm">
-                                <div class="defenderWrapper">
-                                        <div class="container col-md-12">
-                                            <div class="row">
-                                                <div id="defender" class="col-sm">
-                                                    <div class="card-group">
-                                                        <div id=harryPotterDefend class="card col-md-12">
-                                                      <img class="card-img-top" src="./assets/images/harryCharacter.jpg" alt="Card image cap">
-                                                      <div class="card-body">
-                                                        <p class="card-text">Health and stuff</p>
-                                                      </div>
-                                                    </div>
-                                                    <div id=hermioneDefend class="card col-md-12">
-                                                      <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
-                                                      <div class="card-body">
-                                                        <p class="card-text">Health and stuff</p>
-                                                      </div>
-                                                    </div>
-                                                    <div id=ronDefend class="card col-md-12">
-                                                      <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
-                                                      <div class="card-body">
-                                                        <p class="card-text">Health and stuff</p>
-                                                      </div>
-                                                    </div>
-                                                    <div id=dracoDefend class="card col-md-12">                                                        
-                                                            <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
-                                                            <div class="card-body">
-                                                              <p class="card-text">Health and stuff</p>
-                                                            </div>
-                                                          </div>
-                                      
-                                                  </div>
-                                                </div>
-                                
-                                            </div>
-                                          </div>
-                                        </div>
-                                
+                            <div id=hermioneDefend class="card col-md-12">
+                              <img class="card-img-top" src="./assets/images/hermioneCharacter.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">Health and stuff</p>
                               </div>
                             </div>
+                            <div id=ronDefend class="card col-md-12">
+                              <img class="card-img-top" src="./assets/images/ronCharacter.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">Health and stuff</p>
+                              </div>
+                            </div>
+                            <div id=dracoDefend class="card col-md-12">
+                              <img class="card-img-top" src="./assets/images/dracoCharacter.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">Health and stuff</p>
+                              </div>
+                            </div>
+
                           </div>
                         </div>
-            
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-    <!-- Bootstrap/JS links -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./assets/javascript/game.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap/JS links -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./assets/javascript/game.js"></script>
 
 </body>
+
 </html>

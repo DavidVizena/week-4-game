@@ -24,7 +24,18 @@ img#losingPic{
     left: 100px;
     z-index: 3;
 }
+/* :root {
+    --fireballStart: -150px;
+} */
+img#fireball{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 375px;
+    left: var(--fireballStart);
+    z-index: 1;
 
+}
 /* fonts */
 @font-face {
     font-family: "ParryHotter";
@@ -64,7 +75,8 @@ div#enemiesPick{
     font-family: "Lumos";
     font-size: 25px;
     color: #ECEC29;
-    font-size: 30px;    
+    font-size: 30px;  
+    min-width: 1174px;  
 }
 div#defenderPick{
     font-family: "Lumos";
