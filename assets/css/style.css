@@ -32,7 +32,7 @@ img#fireball{
     width: 200px;
     position: absolute;
     top: 375px;
-    left: var(--fireballStart);
+    left: -150px;
     z-index: 1;
 
 }

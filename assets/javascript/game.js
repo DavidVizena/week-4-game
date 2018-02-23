@@ -40,9 +40,13 @@ $(document).ready(function () {
         user.Health -= cAttk;
         var defDead = defender.Health -= user.Attack;
         var userDead = user.Attack += attk;
-    //     $("#fireball").show();
+        $("#fireball").show();
+       $("img#fireball").animate({left: "+=900"}, 600);
+       $("img#fireball").fadeOut('slow', function() {});
+       $("img#fireball").animate({left: "-150px"}, 1);
+       
 
-    //    $("#fireball").animate({left: "+=600"}, 1500);
+       
 
         // Displays for card healths
         $(".yourCharactersWrapper .card-text").html("Health: " + user.Health);
